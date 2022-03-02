@@ -7,11 +7,13 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "test:staged": "jest"
   },
   "lint-staged": {
     "src/**/*": [
-      "eslint 'src/**' --fix"
+      "eslint 'src/**' --fix",
+      "yarn test:staged"
     ]
   },
   "devDependencies": {
